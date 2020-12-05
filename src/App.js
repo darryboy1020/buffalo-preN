@@ -5,7 +5,7 @@ function App() {
   // this is an example of using the DemoComponent and passing in props
 
   const props = {
-    name: 'WhateverName',
+    name: 'Hello Name',
     description: 'This is a regular description'
   }
 
@@ -15,6 +15,7 @@ function App() {
       <header className="App-header">
 
         <DemoComponent {...props}/>
+        <DemoComponent name = 'John' description = 'Darrien was here'/>
         <p>
           Buffalo PreNatal
           
