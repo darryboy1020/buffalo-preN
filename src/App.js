@@ -1,4 +1,5 @@
 import DemoComponent from './components/DemoComponent';
+import NavBarSticky from './components/NavbarSticky';
 
 function App() {
   //example of how you can create a content store for your react components.
@@ -9,11 +10,27 @@ function App() {
     description: 'This is a regular description'
   }
 
+  const NavBarStickyProps = {
+    items:[{
+      text: 'GOOGLE',
+      href: 'https://www.google.com/'
+    },
+    {
+      text: 'FACEBOOK',
+      href: 'https://www.facebook.com/'
+    },
+    {
+      text: 'TWITTER',
+      href:'https://www.twitter.com/'
+    }
+  ]
+  }
+
 
   return (
     <div className="App">
       <header className="App-header">
-
+        <NavBarSticky {...NavBarStickyProps}/>
         <DemoComponent {...props}/>
         <DemoComponent name = 'John' description = 'Darrien was here'/>
         <p>
